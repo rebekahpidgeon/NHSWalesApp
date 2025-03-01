@@ -15,6 +15,7 @@ ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/Chatbot" element={<Chatbot />} />
     </Routes>
   </BrowserRouter>
 );
