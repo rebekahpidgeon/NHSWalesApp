@@ -2,6 +2,8 @@
 
 # Import flask and datetime module for showing date and time
 from flask import Flask
+from flask import request
+from chatbot import Chatbot
 import datetime
 
 x = datetime.datetime.now()
@@ -21,6 +23,12 @@ def get_time():
         "Date":x, 
         "programming":"python"
         }
+
+@app.route('/chatresponse', methods=["POST", "GET"])
+def get_response():
+    response = request.json['question']
+
+
 
     
 # Running app
