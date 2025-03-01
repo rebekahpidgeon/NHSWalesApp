@@ -6,9 +6,7 @@ class Chatbot():
 
   def __init__(self):
     self.system_prompt = "You are an expert trained on healthcare and biomedical domain! Give concise answers when the user asks questions. Based on their symptoms, tell them to either book an appointment with their GP, go to an Urgent care Centre or A&E. You should also give them a explaination on what they should tell their doctor based on their symptoms."
-    self.initial_prompt_length = len(self.system_prompt)
-    self.client = None
-    self.medication_added = False
+    self.medications = []
     load_dotenv()
 
     self.client = OpenAI(
@@ -16,20 +14,20 @@ class Chatbot():
       api_key= os.getenv("API_KEY"),
     )
 
+  def update_prompt(self):
+    if self.medications:
+      medication_text = "You should take into account the medication they take, which includes: " + ", ".join(self.medications) + "."
+      self.system_prompt = self.system_prompt + " " + medication_text
+      print(self.system_prompt)
+
   def add_medication(self, medication):
-    if not self.medication_added:
-      self.system_prompt = self.system_prompt + "You should take into account the medication they take, which includes: " + medication
-      self.medication_added = True
-    else:
-      self.system_prompt = self.system_prompt + ", " + medication
+    self.medications.append(medication)
 
   def remove_medication(self, med_to_remove):
-    old_medication = self.system_prompt[self.initial_prompt_length:]
-    new_medication = old_medication.replace(med_to_remove, '')
-    print(new_medication)
-    self.system_prompt = self.system_prompt.replace(old_medication, new_medication)
+    self.medications.remove(med_to_remove)
   
   def run_question(self, question):
+    self.update_prompt()
     completion = self.client.chat.completions.create(
     extra_headers={},
     extra_body={},
@@ -46,5 +44,6 @@ chatbot = Chatbot()
 # Example code
 
 chatbot.add_medication("Iron deficiency tablets")
+chatbot.add_medication("Fluoxetine")
 chatbot.remove_medication("Iron deficiency tablets")
 print(chatbot.run_question("I feel like I am going to faint."))
