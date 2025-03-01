@@ -3,9 +3,10 @@ export default function PrescriptionBox() {
     <div className="bg-white rounded-md p-2 shadow-md">
       <div className="flex">
         <div
-          className="flex flex-col justify-center p-2"
+          className="flex flex-col  px-2"
         >
           <h2 className="font-semibold">Approved! Your order is being filled at the pharmacy</h2>
+          <p className="font-normal text-sm">Time remaining: 2 days</p>
           <p className="font-light text-sm">Ibuprofen</p>
         </div>
         <div

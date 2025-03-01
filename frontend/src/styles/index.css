@@ -8,6 +8,8 @@
   --color-nhs-blue: #005eb8;
   --color-nhs-dark-blue: #003087;
   --color-nhs-light-blue: #41b6e6;
+  --color-primary: red;
+  --color-nhs-blue-wcag: #0057A8;
 }
 
 body {
@@ -43,7 +45,7 @@ body {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: var(--color-nhs-blue-wcag);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
