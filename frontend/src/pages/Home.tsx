@@ -1,4 +1,4 @@
-import Footer from "../components/Footer/Footer"
+import Footer, { ActiveTab } from "../components/Footer/Footer"
 import Navbar from "../components/Navbar/Navbar"
 import PrescriptionBox from "../components/PrescriptionBox/PrescriptionBox"
 import UpcomingAppointments from "../components/UpcomingAppointments/UpcomingAppointments"
@@ -7,12 +7,13 @@ function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar showLogo />
       <div>
         <PrescriptionBox />
         <UpcomingAppointments />
       </div>
-      <Footer />
+      <Footer activeTab={ActiveTab.HOME} />
+
     </>
   )
 }
