@@ -10,6 +10,7 @@ x = datetime.datetime.now()
 
 # Initializing flask app
 app = Flask(__name__)
+chatbot = Chatbot()
 
 
 # Route for seeing a data
@@ -27,9 +28,7 @@ def get_time():
 @app.route('/chatresponse', methods=["POST", "GET"])
 def get_response():
     response = request.json['question']
-
-
-
+    return chatbot.run_question(response)
     
 # Running app
 if __name__ == '__main__':
