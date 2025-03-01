@@ -13,7 +13,7 @@ export default function Navbar(props: NavbarProps) {
           <img src={Logo} alt="logo" className="h-full" />)
       }
       {props.title && (
-        <h1 className="text-xl font-semibold">{props.title}</h1>
+        <h1 className="text-2xl font-semibold">{props.title}</h1>
       )}
     </nav>
   );

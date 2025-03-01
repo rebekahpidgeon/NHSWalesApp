@@ -1,5 +1,5 @@
-import './styles/normalize.css'
 import './styles/index.css'
+import './styles/normalize.css'
 import Home from './pages/Home.tsx'
 import Chatbot from './pages/Chatbot.tsx'
 import { BrowserRouter, Route, Routes } from "react-router";
