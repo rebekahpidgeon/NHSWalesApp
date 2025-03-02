@@ -4,25 +4,25 @@ import Navbar from "../components/Navbar/Navbar"
 
 const appointments = [
   {
-    doctor: "Dr. John Doe",
-    image: "https://picsum.photos/128/128",
+    doctor: "Dr. Watson Mccoy",
+    image: "https://www.northernmed.com/wp-content/uploads/2020/12/headshot-placeholder-01-996x996.jpg",
     appointmentType: "General Checkup",
     dateTime: "7th March 2025 at 11:00AM",
     location: "Greek Street, London, W1D 4DJ"
   },
   {
-    doctor: "Dr. Jane Doe",
-    image: "https://picsum.photos/128/128",
+    doctor: "Dr. Ariene Karistin",
+    image: "https://www.northernmed.com/wp-content/uploads/2020/12/headshot-placeholder-01-996x996.jpg",
     appointmentType: "Dental Checkup",
-    dateTime: "2022-01-01 11:00",
-    location: "London"
+    dateTime: "12th March 2025 at 10:00AM",
+    location: "1 Harley Street, London, W1G 9QD"
   },
   {
-    doctor: "Dr. John Doe",
-    image: "https://picsum.photos/128/128",
+    doctor: "Dr. Oscar Hayman",
+    image: "https://www.northernmed.com/wp-content/uploads/2020/12/headshot-placeholder-01-996x996.jpg",
     appointmentType: "General Checkup",
-    dateTime: "2022-01-01 10:00",
-    location: "London"
+    dateTime: "27th April 2025 at 2:00PM",
+    location: "85 Wimpole Street, London, W1G 9RJ"
   },
 ]
 
