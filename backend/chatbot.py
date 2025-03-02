@@ -39,4 +39,3 @@ class Chatbot():
     )
     return completion.choices[0].message.content
   
-# Example code
