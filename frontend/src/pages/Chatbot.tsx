@@ -24,7 +24,7 @@ export default function Chatbot() {
 
     const response = await fetch("https://nhs-wales-app-werr.vercel.app/chatresponse", {
       method: "POST",
-      
+
       headers: {
         "Content-Type": "application/json",
       },
@@ -71,7 +71,7 @@ export default function Chatbot() {
         </div>
       </div>
 
-      <Footer activeTab={ActiveTab.CHATBOT} className="absolute bottom-0 w-full h-12" />
+      <Footer activeTab={ActiveTab.CHATBOT} />
     </div>
   );
 }
