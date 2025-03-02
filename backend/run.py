@@ -2,7 +2,8 @@
 
 # Import flask and datetime module for showing date and time
 from flask import Flask
-from flask import request
+from flask import request, jsonify
+from flask_cors import CORS
 from chatbot import Chatbot
 import datetime
 
@@ -10,6 +11,7 @@ x = datetime.datetime.now()
 
 # Initializing flask app
 app = Flask(__name__)
+CORS(app)
 chatbot = Chatbot()
 
 
@@ -28,7 +30,13 @@ def get_time():
 @app.route('/chatresponse', methods=["POST", "GET"])
 def get_response():
     response = request.json['question']
-    return chatbot.run_question(response)
+    # print("Received question:", response, flush=True)  # This prints to the terminal
+    
+    answer = chatbot.run_question(response)
+    # print("Received answer:", answer, flush=True)  # This prints to the terminal
+    
+
+    return jsonify({"answer": answer})
     
 # Running app
 if __name__ == '__main__':

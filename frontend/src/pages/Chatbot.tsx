@@ -4,6 +4,8 @@ import { Input } from "..//components/ui/input";
 import { Button } from "..//components/ui/button";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
+import Footer, { ActiveTab } from "../components/Footer/Footer"
+// import Navbar from "../components/Navbar/Navbar"
 
 export default function Chatbot() {
 
@@ -22,16 +24,18 @@ export default function Chatbot() {
     setInput("");
 
 
-    const response = await fetch('/chatresponse', {
+    const response = await fetch("https://nhs-wales-app-werr.vercel.app/chatresponse", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ question: userInput })
     });
+    
+    const chatbotResponse = await response.json();
+    const data = chatbotResponse.answer;
 
-    const data = await response.text();
-
+    
     setMessages((prev) => [...prev, { text: data, type: "bot" }]);
     // Simulating chatbot response
 
@@ -76,6 +80,13 @@ export default function Chatbot() {
           <Send size={20} />
         </Button>
       </div>
+      <div className="relative w-full h-full flex flex-col">
+          
+            
+      
+      
+            <Footer activeTab={ActiveTab.CHATBOT} />
+          </div>
     </div>
   );
 }
