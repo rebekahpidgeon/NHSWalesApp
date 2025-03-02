@@ -26,7 +26,7 @@ const appointments = [
   },
 ]
 
-export default function Appointments() {
+export default function Prescriptions() {
   return (
     <div className="relative w-full h-full flex flex-col">
       <Navbar title="Appointments" />
