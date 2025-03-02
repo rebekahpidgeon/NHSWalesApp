@@ -6,6 +6,8 @@ import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 import Footer, { ActiveTab } from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm";
 
 export default function Chatbot() {
   interface Message {
@@ -52,7 +54,7 @@ export default function Chatbot() {
                 animate={{ opacity: 1, y: 0 }}
                 className={`p-3 rounded-lg max-w-xs ${msg.type === "user" ? "bg-blue-500 text-white self-end ml-auto" : "bg-gray-200 text-gray-900"}`}
               >
-                {msg.text}
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.text}</ReactMarkdown>
               </motion.div>
             ))}
           </CardContent>
