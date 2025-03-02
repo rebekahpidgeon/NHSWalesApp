@@ -13,6 +13,7 @@ class Chatbot():
       base_url="https://openrouter.ai/api/v1",
       api_key= os.getenv("API_KEY"),
     )
+    self.add_medication("Ibuprofen")
 
   def update_prompt(self):
     if self.medications:
