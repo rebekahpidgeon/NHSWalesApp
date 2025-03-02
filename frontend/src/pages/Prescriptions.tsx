@@ -53,7 +53,7 @@ export default function Prescriptions() {
         </a>
       </div>
 
-      <Footer activeTab={ActiveTab.APPOINTMENTS} />
+      <Footer activeTab={ActiveTab.PRESCRIPTIONS} />
     </div>
   );
 }

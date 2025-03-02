@@ -1,7 +1,7 @@
 import { Cog, Home, Hospital, MessageCircle, Pill } from "lucide-react";
 
 export enum ActiveTab {
-  PRESCRIPTION = "PRESCRIPTION",
+  PRESCRIPTIONS = "PRESCRIPTIONS",
   APPOINTMENTS = "APPOINTMENTS",
   HOME = "HOME",
   CHATBOT = "CHATBOT",
@@ -9,7 +9,7 @@ export enum ActiveTab {
 }
 
 const tabs = [
-  { href: "/prescription", icon: <Pill size={24} />, key: ActiveTab.PRESCRIPTION },
+  { href: "/prescriptions", icon: <Pill size={24} />, key: ActiveTab.PRESCRIPTIONS },
   { href: "/appointments", icon: <Hospital size={24} />, key: ActiveTab.APPOINTMENTS },
   { href: "/", icon: <Home size={24} />, key: ActiveTab.HOME },
   { href: "/chatbot", icon: <MessageCircle size={24} />, key: ActiveTab.CHATBOT },
