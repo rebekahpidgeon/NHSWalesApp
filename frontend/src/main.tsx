@@ -5,6 +5,7 @@ import Chatbot from './pages/Chatbot.tsx'
 import { BrowserRouter, Route, Routes } from "react-router";
 import ReactDOM from "react-dom/client";
 import Appointments from './pages/Appointments.tsx';
+import Prescriptions from './pages/Prescriptions.tsx';
 
 const root = document.getElementById("root");
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(root).render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/appointments" element={<Appointments />} />
+      <Route path="/prescriptions" element={<Prescriptions />} />
       <Route path="/chatbot" element={<Chatbot />} />
     </Routes>
   </BrowserRouter>
