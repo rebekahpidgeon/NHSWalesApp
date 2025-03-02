@@ -6,18 +6,42 @@ import { Send } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Chatbot() {
-  const [messages, setMessages] = useState([]);
+
+  interface Message {
+    text: string;
+    type: 'user' | 'bot';
+  }
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (input.trim() === "") return;
     setMessages([...messages, { text: input, type: "user" }]);
-    setInput("");
 
+    const userInput = input;
+    setInput("");
+<<<<<<< Updated upstream
+
+=======
+     
+
+    const response = await fetch('/chatresponse', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify({question: userInput})
+    });
+    
+    const data = await response.text();
+    
+    setMessages((prev) => [...prev, { text: data, type: "bot" }]);
+>>>>>>> Stashed changes
     // Simulating chatbot response
-    setTimeout(() => {
-      setMessages((prev) => [...prev, { text: "This is a response from the 111 chatbot.", type: "bot" }]);
-    }, 1000);
+
+    // setTimeout(() => {
+    //   setMessages((prev) => [...prev, { text: "This is a response from the 111 chatbot.", type: "bot" }]);
+    // }, 1000);
   };
 
   return (
