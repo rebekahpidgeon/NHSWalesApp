@@ -23,7 +23,7 @@ export default function Chatbot() {
 
     const response = await fetch("https://nhs-wales-app-werr.vercel.app/chatresponse", {
       method: "POST",
-      mode: "no-cors",
+      
       headers: {
         "Content-Type": "application/json",
       },
