@@ -20,9 +20,6 @@ export default function Chatbot() {
 
     const userInput = input;
     setInput("");
-<<<<<<< Updated upstream
-
-=======
      
 
     const response = await fetch('/chatresponse', {
@@ -36,7 +33,6 @@ export default function Chatbot() {
     const data = await response.text();
     
     setMessages((prev) => [...prev, { text: data, type: "bot" }]);
->>>>>>> Stashed changes
     // Simulating chatbot response
 
     // setTimeout(() => {
