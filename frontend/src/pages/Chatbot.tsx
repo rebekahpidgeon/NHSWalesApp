@@ -62,7 +62,7 @@ export default function Chatbot() {
           </CardContent>
         </Card>
 
-        <div className="mt-4 flex items-center gap-2 p-4 bg-white shadow-md sticky bottom-0 w-full rounded-b-xl">
+        <div className="mt-4 flex items-center gap-2 p-4 bg-white shadow-md sticky bottom-0 w-full rounded-xl">
           <Input
             className="flex-1 p-3 rounded-full"
             placeholder="Type your message..."
