@@ -39,11 +39,4 @@ class Chatbot():
     )
     return completion.choices[0].message.content
   
-chatbot = Chatbot()
-
 # Example code
-
-chatbot.add_medication("Iron deficiency tablets")
-chatbot.add_medication("Fluoxetine")
-chatbot.remove_medication("Iron deficiency tablets")
-print(chatbot.run_question("I feel like I am going to faint."))

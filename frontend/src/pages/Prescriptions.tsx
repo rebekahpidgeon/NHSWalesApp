@@ -30,27 +30,22 @@ export default function Prescriptions() {
   return (
     <div className="relative w-full h-full flex flex-col">
       <Navbar title="Appointments" />
-      <div className="p-4 flex flex-col space-y-4 flex-grow overflow-scroll">
-        {appointments.map((appointment, index) => (
-          <Appointment
-            key={index}
-            doctor={appointment.doctor}
-            image={appointment.image}
-            appointmentType={appointment.appointmentType}
-            dateTime={appointment.dateTime}
-            location={appointment.location}
-          />
-        ))}
-      </div>
+      <div className="px-4">
+        <div className="h-16 flex justify-center items-center bg-white shadow-md rounded-md">
+          <a
+            className="py-3 px-6 bg-nhs-blue rounded-full text-white font-bold text-center w-full max-w-xs"
+            href="/appointments"
+          >
+            View your prescriptions
+          </a>
+        </div>
 
-      {/* Button Wrapper with negative margin */}
-      <div className="h-16 flex justify-center items-center bg-white shadow-md mb-12 border-y-2 border-slate-200  ">
-        <a
-          className="py-3 px-6 bg-nhs-blue rounded-full text-white font-bold text-center w-full max-w-xs"
-          href="/appointments"
-        >
-          Book a new appointment
-        </a>
+        <div className="mt-2 bg-white p-4 rounded-md shadow-md flex flex-col space-x-4">
+          {/* Grid */}
+
+
+        </div>
+
       </div>
 
       <Footer activeTab={ActiveTab.PRESCRIPTIONS} />
