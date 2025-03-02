@@ -19,7 +19,7 @@ export default function Appointment(props: AppointmentProps) {
                     </div>
                 </div>
                 {/* Date and Location */}
-                <div className="flex flex-col">
+                <div className="flex flex-col mt-2">
                     <p className="font-light text-sm">{props.dateTime}</p>
                     <p className="font-light text-sm">{props.location}</p>
                 </div>
@@ -27,10 +27,10 @@ export default function Appointment(props: AppointmentProps) {
                     {/* Learn more and cancel booking button */}
                     <div className="flex justify-between pt-2 space-x-2">
 
-                        <a href="#" className="text-sm bg-nhs-blue px-4 py-2 text-white rounded-md font-semibold w-1/2 text-center whitespace-nowrap">
+                        <a href="#" className="text-sm bg-nhs-blue px-4 py-2 text-white rounded-sm font-semibold w-1/2 text-center whitespace-nowrap">
                             Learn more
                         </a>
-                        <a href="#" className="text-sm bg-red-700 px-4 py-2 text-white rounded-md font-semibold w-1/2 text-center whitespace-nowrap">
+                        <a href="#" className="text-sm bg-red-700 px-4 py-2 text-white rounded-sm font-semibold w-1/2 text-center whitespace-nowrap">
                             Cancel booking
                         </a>
                     </div>

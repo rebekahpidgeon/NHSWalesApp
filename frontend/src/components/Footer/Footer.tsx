@@ -23,7 +23,7 @@ interface FooterProps {
 export default function Footer(props: FooterProps) {
 
   return (
-    <footer className="fixed bottom-0 bg-nhs-blue text-white h-12 p-3 flex items-center justify-between w-full">
+    <footer className="absolute bottom-0 bg-nhs-blue text-white h-12 p-3 flex items-center justify-between w-full">
       {tabs.map(({ href, icon, key }) => (
         <a
           key={href}

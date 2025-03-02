@@ -27,12 +27,10 @@ const appointments = [
 ]
 
 export default function Appointments() {
-
   return (
-    <>
+    <div className="relative w-full h-full flex flex-col">
       <Navbar title="Appointments" />
-      <div className="p-4">
-
+      <div className="p-4 flex flex-col space-y-4 flex-grow overflow-scroll">
         {appointments.map((appointment, index) => (
           <Appointment
             key={index}
@@ -43,16 +41,19 @@ export default function Appointments() {
             location={appointment.location}
           />
         ))}
+      </div>
 
+      {/* Button Wrapper with negative margin */}
+      <div className="h-16 flex justify-center items-center bg-white shadow-md mb-12 border-y-2 border-slate-200  ">
         <a
-          className="fixed bottom-16 left-1/2 -translate-x-1/2 py-4 px-4 bg-nhs-blue max-w-xs w-full rounded-full shadow-md text-center text-white font-bold"
+          className="py-3 px-6 bg-nhs-blue rounded-full text-white font-bold text-center w-full max-w-xs"
           href="/appointments"
         >
           Book a new appointment
         </a>
-
       </div>
+
       <Footer activeTab={ActiveTab.APPOINTMENTS} />
-    </>
-  )
+    </div>
+  );
 }
