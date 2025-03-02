@@ -1,6 +1,7 @@
 import Appointment from "../components/Appointment/Appointment"
 import Footer, { ActiveTab } from "../components/Footer/Footer"
 import Navbar from "../components/Navbar/Navbar"
+import PrescriptionBox from "../components/PrescriptionBox/PrescriptionBox";
 
 const appointments = [
   {
@@ -36,7 +37,7 @@ export default function Prescriptions() {
             className="py-3 px-6 bg-nhs-blue rounded-full text-white font-bold text-center w-full max-w-xs"
             href="/prescriptions"
           >
-            View your prescriptions
+            View all prescriptions
           </a>
         </div>
 
@@ -49,7 +50,7 @@ export default function Prescriptions() {
               <div className="flex justify-between items-center h-full">
                 <div>
                   <h2 className="font-bold text-md">Upcoming Prescription</h2>
-                  <p className="text-sm font-light mt-1">You have a prescription due in 3 days</p>
+                  <p className="text-sm font-light mt-1 leading-3.5">You have a prescription due in 3 days</p>
                 </div>
 
               </div>
@@ -66,6 +67,7 @@ export default function Prescriptions() {
           </div>
         </div>
       </div>
+      <PrescriptionBox />
 
       <Footer activeTab={ActiveTab.PRESCRIPTIONS} />
     </div>

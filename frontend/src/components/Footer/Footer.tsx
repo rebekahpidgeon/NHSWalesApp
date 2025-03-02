@@ -13,7 +13,7 @@ const tabs = [
   { href: "/appointments", icon: <Hospital size={24} />, key: ActiveTab.APPOINTMENTS },
   { href: "/", icon: <Home size={24} />, key: ActiveTab.HOME },
   { href: "/chatbot", icon: <MessageCircle size={24} />, key: ActiveTab.CHATBOT },
-  { href: "/settings", icon: <Cog size={24} />, key: ActiveTab.SETTINGS },
+  { href: "#", icon: <Cog size={24} />, key: ActiveTab.SETTINGS },
 ];
 
 interface FooterProps {
