@@ -3,7 +3,7 @@
 # Import flask and datetime module for showing date and time
 from flask import Flask
 from flask import request, jsonify
-from flask_cors import CORS
+
 from chatbot import Chatbot
 import datetime
 
@@ -11,7 +11,7 @@ x = datetime.datetime.now()
 
 # Initializing flask app
 app = Flask(__name__)
-CORS(app)
+
 chatbot = Chatbot()
 
 
