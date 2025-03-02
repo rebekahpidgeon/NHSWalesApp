@@ -41,8 +41,9 @@ export default function Prescriptions() {
         </div>
 
         <div className="mt-2 bg-white p-4 rounded-md shadow-md flex flex-col space-x-4">
-         {/* Grid */}
-         
+          {/* Grid */}
+
+
         </div>
 
       </div>

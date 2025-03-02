@@ -20,18 +20,18 @@ export default function Chatbot() {
 
     const userInput = input;
     setInput("");
-     
+
 
     const response = await fetch('/chatresponse', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body:JSON.stringify({question: userInput})
+      body: JSON.stringify({ question: userInput })
     });
-    
+
     const data = await response.text();
-    
+
     setMessages((prev) => [...prev, { text: data, type: "bot" }]);
     // Simulating chatbot response
 
